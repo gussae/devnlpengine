@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-devnlpengine-dev-131405-authRole",
+            "UnauthRoleArn": "arn:aws:iam::672947765380:role/amplify-devnlpengine-dev-131405-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::672947765380:role/amplify-devnlpengine-dev-131405-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-devnlpengine-dev-131405-deployment",
+            "UnauthRoleName": "amplify-devnlpengine-dev-131405-unauthRole",
+            "StackName": "amplify-devnlpengine-dev-131405",
+            "StackId": "arn:aws:cloudformation:us-west-2:672947765380:stack/amplify-devnlpengine-dev-131405/29d777e0-c2d9-11ea-a828-0220ef6e1d1c",
+            "AmplifyAppId": "daufkkm4dgraw"
+        },
+        "categories": {
+            "auth": {
+                "devnlpengine81a90b50": {}
+            }
+        }
+    }
+}

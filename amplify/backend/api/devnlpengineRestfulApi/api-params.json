@@ -1,0 +1,42 @@
+{
+    "paths": [
+        {
+            "name": "/nlpengine/test",
+            "lambdaFunction": "nlpengineTest",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ]
+            }
+        }
+    ],
+    "resourceName": "devnlpengineRestfulApi",
+    "apiName": "devnlpengineRestfulApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "nlpengineTest"
+        }
+    ],
+    "privacy": {
+        "auth": 2,
+        "unauth": 0,
+        "authRoleName": "amplify-devnlpengine-dev-131405-authRole",
+        "unAuthRoleName": "amplify-devnlpengine-dev-131405-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "nlpengineTest",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ],
+    "uuid": "2eb54dd4"
+}

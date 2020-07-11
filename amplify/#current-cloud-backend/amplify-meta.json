@@ -1,0 +1,109 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "amplify-devnlpengine-dev-131405-authRole",
+			"UnauthRoleArn": "arn:aws:iam::672947765380:role/amplify-devnlpengine-dev-131405-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::672947765380:role/amplify-devnlpengine-dev-131405-authRole",
+			"Region": "us-west-2",
+			"DeploymentBucketName": "amplify-devnlpengine-dev-131405-deployment",
+			"UnauthRoleName": "amplify-devnlpengine-dev-131405-unauthRole",
+			"StackName": "amplify-devnlpengine-dev-131405",
+			"StackId": "arn:aws:cloudformation:us-west-2:672947765380:stack/amplify-devnlpengine-dev-131405/29d777e0-c2d9-11ea-a828-0220ef6e1d1c",
+			"AmplifyAppId": "daufkkm4dgraw"
+		}
+	},
+	"auth": {
+		"devnlpengine81a90b50": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false,
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-devnlpengine-dev-131405-deployment/amplify-cfn-templates/auth/devnlpengine81a90b50-cloudformation-template.yml",
+				"logicalId": "authdevnlpengine81a90b50"
+			},
+			"lastPushTimeStamp": "2020-07-11T19:15:44.715Z",
+			"output": {
+				"AppClientSecret": "1rq737jbnr815u7401133eikrj3cpmks0p0ddng3uq17lgmgq4dl",
+				"UserPoolId": "us-west-2_AbNfkUDLp",
+				"AppClientIDWeb": "b3gmnsdkord8o6temmuva8ok1",
+				"AppClientID": "1vd5pt9rkvdgcdvclret63aatk",
+				"IdentityPoolId": "us-west-2:5aa0801c-8fb2-4398-9d95-7cc9126bad59",
+				"IdentityPoolName": "devnlpengine81a90b50_identitypool_81a90b50__dev",
+				"UserPoolName": "devnlpengine81a90b50_userpool_81a90b50"
+			},
+			"lastPushDirHash": "vr4lIHIRwDkOhrupii5lhfzZKEA="
+		}
+	},
+	"interactions": {
+		"nlpengineDemoBot": {
+			"service": "Lex",
+			"providerPlugin": "awscloudformation",
+			"build": true,
+			"lastBuildTimeStamp": "2020-07-10T19:47:12.834Z",
+			"lastPackageTimeStamp": "2020-07-10T19:47:12.876Z",
+			"distZipFilename": "nlpengineDemoBot-365151384c614e635472-build.zip",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-devnlpengine-dev-131405-deployment/amplify-cfn-templates/interactions/nlpengineDemoBot-cloudformation-template.json",
+				"logicalId": "interactionsnlpengineDemoBot"
+			},
+			"lastPushTimeStamp": "2020-07-11T19:15:44.718Z",
+			"output": {
+				"FunctionArn": "arn:aws:lambda:us-west-2:672947765380:function:devnlpengine_cfnlambda_b2221ebe-dev",
+				"Region": "us-west-2",
+				"BotName": "ScheduleAppointment_dev"
+			},
+			"lastPushDirHash": "H/l9UZr5Nxo246y8asJrqT9IruM="
+		}
+	},
+	"function": {
+		"nlpengineTest": {
+			"build": true,
+			"providerPlugin": "awscloudformation",
+			"service": "Lambda",
+			"dependsOn": [],
+			"lastBuildTimeStamp": "2020-07-11T19:14:29.249Z",
+			"lastPackageTimeStamp": "2020-07-11T19:14:31.591Z",
+			"distZipFilename": "nlpengineTest-763353494f485a6c4b37-build.zip",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-devnlpengine-dev-131405-deployment/amplify-cfn-templates/function/nlpengineTest-cloudformation-template.json",
+				"logicalId": "functionnlpengineTest"
+			},
+			"lastPushTimeStamp": "2020-07-11T19:15:44.744Z",
+			"output": {
+				"Region": "us-west-2",
+				"Arn": "arn:aws:lambda:us-west-2:672947765380:function:nlpengine-test-dev",
+				"Name": "nlpengine-test-dev",
+				"LambdaExecutionRole": "devnlpengineLambdaRole4c1f70df-dev"
+			},
+			"lastPushDirHash": "KBG8bWPXsu24Hi3h/++P+0hlLjY="
+		}
+	},
+	"api": {
+		"devnlpengineRestfulApi": {
+			"service": "API Gateway",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [
+				{
+					"category": "function",
+					"resourceName": "nlpengineTest",
+					"attributes": [
+						"Name",
+						"Arn"
+					]
+				}
+			],
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-devnlpengine-dev-131405-deployment/amplify-cfn-templates/api/devnlpengineRestfulApi-cloudformation-template.json",
+				"logicalId": "apidevnlpengineRestfulApi"
+			},
+			"lastPushTimeStamp": "2020-07-11T19:15:44.732Z",
+			"output": {
+				"ApiName": "devnlpengineRestfulApi",
+				"RootUrl": "https://x2pjhxdl3b.execute-api.us-west-2.amazonaws.com/dev",
+				"ApiId": "x2pjhxdl3b"
+			},
+			"lastPushDirHash": "WLlvYdDRjnW3N7jvV4YdgG8z07U="
+		}
+	}
+}
