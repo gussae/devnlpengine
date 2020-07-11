@@ -27,6 +27,7 @@ yarn-error.log*
 .history/
 .vscode/
 test*
+debug.log
 
 #python 
 check/include/*
